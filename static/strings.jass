@@ -180,7 +180,7 @@
 "chainlightning"
 
 // 技能命令串 通魔/引导
-@since 1.32
+// @since 1.32
 "channel"
 
 // 技能命令串 符咒
@@ -403,7 +403,7 @@
 "unholyfrenzyaoe"
 
 // 技能命令串 仪式匕首(物品)
-@since 1.30
+// @since 1.30
 "ritualdagger"
 
 // 技能命令串 照明弹
