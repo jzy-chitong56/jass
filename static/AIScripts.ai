@@ -843,14 +843,14 @@ globals
     // 龙鹰骑士（不享有乌云科技）（'h000'）
     // 部分官方战役AI脚本的变量
     constant integer NO_CLOUD_HAWK  = 'h000'
-    // 龙鹰骑士
+    // 龙鹰骑士（HUMAN_DRAGON_HAWK）
     // 部分官方战役AI脚本的变量
     constant integer CLOUD_HAWK     = HUMAN_DRAGON_HAWK
 
 
     // 兽族AI全局变量
 
-    // 当前兵营（兽族）数量，不含建造中
+    // 当前兵营（人族/兽族）数量，不含建造中
     constant integer c_barracks_done     = 0
     // 当前蝙蝠骑士数量，含建造中
     constant integer c_batrider          = 0
