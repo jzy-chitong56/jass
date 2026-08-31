@@ -977,7 +977,7 @@ globals
     // 当前埋骨地数量，不含建造中
     constant integer c_boneyard_done     = 0
     // 当前黑色城堡数量(亡灵三本基地)，不含建造中
-    // 不统计浮空城/大墓(亡灵一本基地)、亡者大厅(亡灵二本基地)的数量
+    // 不统计浮空城/大墓(亡灵一本基地)、亡者大厅(亡灵二本基地)的数量，不含建造中
     constant integer c_citadel_done      = 0
     // 当前地穴恶魔（蜘蛛）数量，含建造中
     constant integer c_fiend             = 0
