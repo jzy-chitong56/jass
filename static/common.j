@@ -5851,7 +5851,6 @@ native CreateUnitAtLocByName takes player id, string unitname, location whichLoc
 native CreateCorpse takes player whichPlayer, integer unitid, real x, real y, real face returns unit
 
 // 杀死单位
-// 杀死单位
 // 立即杀死指定单位，会触发死亡事件和掉落物品
 // @param whichUnit 要杀死的单位
 // @example call KillUnit(u)
@@ -5867,8 +5866,7 @@ native ShowUnit takes unit whichUnit, boolean show returns nothing
 
 // 设置指定单位属性 [R]
 // @param whichUnitState 单位属性，可选 UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE, UNIT_STATE_MANA, UNIT_STATE_MAX_MANA
-// 设置单位状态
-// 设置单位的各种状态值（生命值、魔法值等）
+// 设置单位状态（生命值、魔法值等）
 // @param whichUnit 要设置的单位
 // @param whichUnitState 单位状态类型 (UNIT_STATE_LIFE, UNIT_STATE_MANA, UNIT_STATE_MAX_LIFE, UNIT_STATE_MAX_MANA等)
 // @param newVal 新的状态值
@@ -5881,7 +5879,6 @@ native SetUnitX takes unit whichUnit, real newX returns nothing
 // @example call SetUnitY(u, 512.0)
 native SetUnitY takes unit whichUnit, real newY returns nothing
 // 移动指定单位(立即)(指定坐标) [R]
-// 设置单位位置
 // 立即将单位移动到指定坐标位置
 // @param whichUnit 要移动的单位
 // @param newX 新的X坐标
@@ -5895,16 +5892,14 @@ native SetUnitPosition takes unit whichUnit, real newX, real newY returns nothin
 // @example call SetUnitPositionLoc(u, loc) // 将单位移动到位置点
 native SetUnitPositionLoc takes unit whichUnit, location whichLocation returns nothing
 // 设置指定单位朝向 [R]
-// 设置单位的面向角度
 // @param whichUnit 要设置的单位
-// @param facingAngle 面向角度（弧度）
+// @param facingAngle 朝向(面向角度)（弧度制）
 // @example call SetUnitFacing(u, 1.57) // 设置单位面向90度
 native SetUnitFacing takes unit whichUnit, real facingAngle returns nothing
 // 设置指定单位朝向(指定转身持续时间)
 // @example call SetUnitFacingTimed(u, 3.14, 0.5)
 native SetUnitFacingTimed takes unit whichUnit, real facingAngle, real duration returns nothing
 // 设置指定单位移动速度
-// 设置单位的移动速度
 // @param whichUnit 要设置的单位
 // @param newSpeed 新的移动速度（游戏单位/秒）
 // @example call SetUnitMoveSpeed(u, 300.0) // 设置单位移动速度为300
@@ -5919,8 +5914,7 @@ native SetUnitTurnSpeed takes unit whichUnit, real newTurnSpeed returns nothing
 // @example call SetUnitPropWindow(u, 1.57)
 native SetUnitPropWindow takes unit whichUnit, real newPropWindowAngle returns nothing
 // 设置指定单位警界范围，未设置时默认值取物遍
-// 设置单位攻击范围
-// 设置单位的自动攻击获取范围
+// 设置单位的自动攻击范围，敌方单位进入该距离时会自动攻击
 // @param whichUnit 要设置的单位
 // @param newAcquireRange 新的攻击获取范围
 // @example call SetUnitAcquireRange(u, 500.0) // 设置单位攻击范围为500
@@ -5948,8 +5942,6 @@ native GetUnitDefaultFlyHeight takes unit whichUnit returns real
 
 // 设置指定单位所属(指定玩家)
 // @param changeColor 是否改变队伍颜色
-// 设置单位拥有者
-// 改变单位的拥有者玩家
 // @param whichUnit 要改变拥有者的单位
 // @param whichPlayer 新的拥有者玩家
 // @param changeColor 是否改变单位颜色
@@ -6003,8 +5995,8 @@ native GetHeroAgi takes unit whichHero, boolean includeBonuses returns integer
 native GetHeroInt takes unit whichHero, boolean includeBonuses returns integer
 
 // 降低指定英雄等级 [R]
-// @param howManyLevels 降级数
 // 降级到0或以下时设为1级
+// @param howManyLevels 降级数
 native UnitStripHeroLevel takes unit whichHero, integer howManyLevels returns boolean
 
 // 获取指定英雄经验值
@@ -6023,8 +6015,8 @@ native UnitModifySkillPoints takes unit whichHero, integer skillPointDelta retur
 // @param showEyeCandy 因此操作升级时是否显示升级特效，该设置对降级无效
 native AddHeroXP takes unit whichHero, integer xpToAdd, boolean showEyeCandy returns nothing
 // 设置指定英雄等级
-// @param showEyeCandy 因此操作升级时是否显示升级特效，该设置对降级无效
 // 降级到0或以下时设为1级
+// @param showEyeCandy 因此操作升级时是否显示升级特效，该设置对降级无效
 native SetHeroLevel takes unit whichHero, integer level, boolean showEyeCandy returns nothing
 // 获取指定英雄等级
 constant native GetHeroLevel takes unit whichHero returns integer
