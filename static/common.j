@@ -818,13 +818,13 @@ globals
 	constant mousebuttontype MOUSE_BUTTON_TYPE_MIDDLE = ConvertMouseButtonType(2)
 	// 鼠标 右键
 	constant mousebuttontype MOUSE_BUTTON_TYPE_RIGHT = ConvertMouseButtonType(3)
-	// 动画类型 - 出生(估计包含训练完成、创建、召唤)
+	// 动画类型 - 诞生(估计包含训练完成、创建、召唤)
 	constant animtype ANIM_TYPE_BIRTH = ConvertAnimType(0)
 	// 动画类型 - 死亡
 	constant animtype ANIM_TYPE_DEATH = ConvertAnimType(1)
 	// 动画类型 - 腐烂
 	constant animtype ANIM_TYPE_DECAY = ConvertAnimType(2)
-	// 动画类型 - 英雄消散
+	// 动画类型 - 驱散
 	constant animtype ANIM_TYPE_DISSIPATE = ConvertAnimType(3)
 	// 动画类型 - 站立
 	constant animtype ANIM_TYPE_STAND = ConvertAnimType(4)
@@ -832,17 +832,17 @@ globals
 	constant animtype ANIM_TYPE_WALK = ConvertAnimType(5)
 	// 动画类型 - 攻击
 	constant animtype ANIM_TYPE_ATTACK = ConvertAnimType(6)
-	// 动画类型 - 变身
+	// 动画类型 - 变异
 	constant animtype ANIM_TYPE_MORPH = ConvertAnimType(7)
-	// 动画类型 - 睡眠
+	// 动画类型 - 昏睡
 	constant animtype ANIM_TYPE_SLEEP = ConvertAnimType(8)
-	// 动画类型 - 施法
+	// 动画类型 - 法术
 	constant animtype ANIM_TYPE_SPELL = ConvertAnimType(9)
-	// 动画类型 - 头像视窗
+	// 动画类型 - 头像
 	constant animtype ANIM_TYPE_PORTRAIT = ConvertAnimType(10)
 	// 子动画类型 - 定身
 	constant subanimtype SUBANIM_TYPE_ROOTED = ConvertSubAnimType(11)
-	// 子动画类型 - 变形
+	// 子动画类型 - 变形Ex
 	constant subanimtype SUBANIM_TYPE_ALTERNATE_EX = ConvertSubAnimType(12)
 	// 子动画类型 - 循环
 	constant subanimtype SUBANIM_TYPE_LOOPING = ConvertSubAnimType(13)
@@ -852,7 +852,7 @@ globals
 	constant subanimtype SUBANIM_TYPE_THROW = ConvertSubAnimType(15)
 	// 子动画类型 - 尖刺
 	constant subanimtype SUBANIM_TYPE_SPIKED = ConvertSubAnimType(16)
-	// 子动画类型 - 快速
+	// 子动画类型 - 快
 	constant subanimtype SUBANIM_TYPE_FAST = ConvertSubAnimType(17)
 	// 子动画类型 - 旋转
 	constant subanimtype SUBANIM_TYPE_SPIN = ConvertSubAnimType(18)
@@ -864,7 +864,7 @@ globals
 	constant subanimtype SUBANIM_TYPE_DEFEND = ConvertSubAnimType(21)
 	// 子动画类型 - 庆祝胜利
 	constant subanimtype SUBANIM_TYPE_VICTORY = ConvertSubAnimType(22)
-	// 子动画类型 - 转身
+	// 子动画类型 - 转向
 	constant subanimtype SUBANIM_TYPE_TURN = ConvertSubAnimType(23)
 	// 子动画类型 - 往左
 	constant subanimtype SUBANIM_TYPE_LEFT = ConvertSubAnimType(24)
