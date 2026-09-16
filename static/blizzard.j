@@ -293,10 +293,10 @@ globals
     constant integer bj_CAMPAIGN_INDEX_XU = 7
     // 战役过场电影索引 冰封王座兽族战役（8）
     constant integer bj_CAMPAIGN_INDEX_XO = 8
-    // 战役过场电影索引 被遗忘的王国被人族战役（9）
+    // 战役过场电影索引 被遗忘者王国被人族战役（9）
     // @since 3.0.0
     constant integer bj_CAMPAIGN_INDEX_RH = 9
-    // 战役过场电影索引 被遗忘的王国被遗忘者战役（10）
+    // 战役过场电影索引 被遗忘者王国被遗忘者战役（10）
     // @since 3.0.0
     constant integer bj_CAMPAIGN_INDEX_RU = 10
 
@@ -320,10 +320,10 @@ globals
     constant integer bj_CAMPAIGN_OFFSET_XU = 7
     // 战役关卡索引 冰封王座兽族战役（8）
     constant integer bj_CAMPAIGN_OFFSET_XO = 8
-    // 战役过场电影索引 被遗忘的王国被人族战役（0）
+    // 战役过场电影索引 被遗忘者王国被人族战役（0）
     // @since 3.0.0
     constant integer bj_CAMPAIGN_OFFSET_RH = 0
-    // 战役过场电影索引 被遗忘的王国被遗忘者战役（1）
+    // 战役过场电影索引 被遗忘者王国被遗忘者战役（1）
     // @since 3.0.0
     constant integer bj_CAMPAIGN_OFFSET_RU = 1
 
@@ -530,34 +530,34 @@ globals
 
     // Rebirth Human
 
-    // 战役关卡 被遗忘的王国人族01（bj_CAMPAIGN_OFFSET_RH * 1000 + 0）
+    // 战役关卡 被遗忘者王国人族01（bj_CAMPAIGN_OFFSET_RH * 1000 + 0）
     // @since 3.0.0
     constant integer bj_MISSION_INDEX_RH00 = bj_CAMPAIGN_OFFSET_RH * 1000 + 0
-    // 战役关卡 被遗忘的王国人族02（bj_CAMPAIGN_OFFSET_RH * 1000 + 1）
+    // 战役关卡 被遗忘者王国人族02（bj_CAMPAIGN_OFFSET_RH * 1000 + 1）
     // @since 3.0.0
     constant integer bj_MISSION_INDEX_RH01 = bj_CAMPAIGN_OFFSET_RH * 1000 + 1
-    // 战役关卡 被遗忘的王国人族03（bj_CAMPAIGN_OFFSET_RH * 1000 + 2）
+    // 战役关卡 被遗忘者王国人族03（bj_CAMPAIGN_OFFSET_RH * 1000 + 2）
     // @since 3.0.0
     constant integer bj_MISSION_INDEX_RH02 = bj_CAMPAIGN_OFFSET_RH * 1000 + 2
-    // 战役关卡 被遗忘的王国人族04（bj_CAMPAIGN_OFFSET_RH * 1000 + 3）
+    // 战役关卡 被遗忘者王国人族04（bj_CAMPAIGN_OFFSET_RH * 1000 + 3）
     // @since 3.0.0
     constant integer bj_MISSION_INDEX_RH03 = bj_CAMPAIGN_OFFSET_RH * 1000 + 3
-    // 战役关卡 被遗忘的王国人族05（bj_CAMPAIGN_OFFSET_RH * 1000 + 4）
+    // 战役关卡 被遗忘者王国人族05（bj_CAMPAIGN_OFFSET_RH * 1000 + 4）
     // @since 3.0.0
     constant integer bj_MISSION_INDEX_RH04 = bj_CAMPAIGN_OFFSET_RH * 1000 + 4
 
     // Rebirth Undead
 
-    // 战役关卡 被遗忘的王国被遗忘者01（bj_CAMPAIGN_OFFSET_RU * 1000 + 0）
+    // 战役关卡 被遗忘者王国被遗忘者01（bj_CAMPAIGN_OFFSET_RU * 1000 + 0）
     // @since 3.0.0
     constant integer bj_MISSION_INDEX_RU00 = bj_CAMPAIGN_OFFSET_RU * 1000 + 0
-    // 战役关卡 被遗忘的王国被遗忘者02（bj_CAMPAIGN_OFFSET_RU * 1000 + 1）
+    // 战役关卡 被遗忘者王国被遗忘者02（bj_CAMPAIGN_OFFSET_RU * 1000 + 1）
     // @since 3.0.0
     constant integer bj_MISSION_INDEX_RU01 = bj_CAMPAIGN_OFFSET_RU * 1000 + 1
-    // 战役关卡 被遗忘的王国被遗忘者03（bj_CAMPAIGN_OFFSET_RU * 1000 + 2）
+    // 战役关卡 被遗忘者王国被遗忘者03（bj_CAMPAIGN_OFFSET_RU * 1000 + 2）
     // @since 3.0.0
     constant integer bj_MISSION_INDEX_RU02 = bj_CAMPAIGN_OFFSET_RU * 1000 + 2
-    // 战役关卡 被遗忘的王国被遗忘者04（bj_CAMPAIGN_OFFSET_RU * 1000 + 3）
+    // 战役关卡 被遗忘者王国被遗忘者04（bj_CAMPAIGN_OFFSET_RU * 1000 + 3）
     // @since 3.0.0
     constant integer bj_MISSION_INDEX_RU03 = bj_CAMPAIGN_OFFSET_RU * 1000 + 3
 
@@ -585,10 +585,10 @@ globals
     constant integer bj_CINEMATICINDEX_XOP = 9
     // 战役过场电影名称 冰封王座结尾（10）
     constant integer bj_CINEMATICINDEX_XED = 10
-    // 战役过场电影名称 被遗忘的王国人族开场（11）
+    // 战役过场电影名称 被遗忘者王国人族开场（11）
     // @since 3.0.0
     constant integer bj_CINEMATICINDEX_HFO = 11
-    // 战役过场电影名称 被遗忘的王国被遗忘者结尾（12）
+    // 战役过场电影名称 被遗忘者王国被遗忘者结尾（12）
     // @since 3.0.0
     constant integer bj_CINEMATICINDEX_UFE = 12
 
