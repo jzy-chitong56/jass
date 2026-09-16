@@ -8433,43 +8433,43 @@ native SetHDWaterParams takes integer red, integer green, integer blue, boolean 
 // @param envMapStrength 环境映射强度
 // @since 3.0.0
 native SetHDWaterParamsEx takes integer red, integer green, integer blue, boolean override, integer vertexDisplacement, integer minOpacity, integer maxOpacity, integer reflectivity, integer emissivity, integer edgeSoftness, integer waveStrength, integer envMapStrength returns nothing
-// 设置水颜色(高清)
+// 设置水颜色
 // 仅支持高清版和决定版
 // @since 3.0.0
 native BlzSetHDWaterColor takes integer red, integer green, integer blue returns nothing
-// 开启/关闭 覆盖水颜色(高清)
+// 开启/关闭 覆盖水颜色
 // 仅支持高清版和决定版
 // @since 3.0.0
 native BlzSetHDWaterColorOverride takes boolean override returns nothing
-// 设置水顶点位移(高清)
+// 设置水顶点位移
 // 仅支持高清版和决定版
 // @since 3.0.0
 native BlzSetHDWaterVertexDisplacement takes integer vertexDisplacement returns nothing
-// 设置水最小不透明度(高清)
+// 设置水最小不透明度
 // 仅支持高清版和决定版
 // @since 3.0.0
 native BlzSetHDWaterMinOpacity takes integer minOpacity returns nothing
-// 设置水最大不透明度(高清)
+// 设置水最大不透明度
 // 仅支持高清版和决定版
 // @since 3.0.0
 native BlzSetHDWaterMaxOpacity takes integer maxOpacity returns nothing
-// 设置水反射率(高清)
+// 设置水反射率
 // 仅支持高清版和决定版
 // @since 3.0.0
 native BlzSetHDWaterReflectivity takes integer reflectivity returns nothing
-// 设置水放射率(高清)
+// 设置水放射率
 // 仅支持高清版和决定版
 // @since 3.0.0
 native BlzSetHDWaterEmissivity takes integer emissivity returns nothing
-// 设置水边缘柔和度(高清)
+// 设置水边缘柔和度
 // 仅支持高清版和决定版
 // @since 3.0.0
 native BlzSetHDWaterEdgeSoftness takes integer edgeSoftness returns nothing
-// 设置水波浪强度(高清)
+// 设置水波浪强度
 // 仅支持高清版和决定版
 // @since 3.0.0
 native BlzSetHDWaterWaveStrength takes integer waveStrength returns nothing
-// 设置水环境映射强度(高清)
+// 设置水环境映射强度
 // 仅支持高清版和决定版
 // @since 3.0.0
 native BlzSetHDWaterEnvMapStrength takes integer envMapStrengthy returns nothing
