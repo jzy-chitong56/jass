@@ -3069,6 +3069,7 @@ function SetWaterBaseColorBJ takes real red, real green, real blue, real transpa
 endfunction
 
 // 设置水高级参数 [Ex](支持指定环境映射强度)
+// 仅支持高清版和决定版
 // @param override 启用/禁用 覆盖颜色
 // @param vertexDisplacement 顶点位移
 // @param minOpacity 最小不透明度
@@ -3083,69 +3084,79 @@ function SetHDWaterParamsExBJ takes real red, real green, real blue, boolean ove
     call SetHDWaterParamsEx (PercentTo255(red), PercentTo255(green), PercentTo255(blue), override, vertexDisplacement, minOpacity, maxOpacity, reflectivity, emissivity, edgeSoftness, waveStrength, envMapStrength)
 endfunction
 
-// 设置水颜色(高清)
-// 设置后自动覆盖水颜色(高清)
+// 设置水颜色
+// 设置后自动覆盖水颜色，仅支持高清版和决定版
 // @since 3.0.0
 function BlzSetHDWaterColorBJ takes real red, real green, real blue returns nothing	
 	call BlzSetHDWaterColor(PercentTo255(red), PercentTo255(green), PercentTo255(blue))
 	call BlzSetHDWaterColorOverride(true)
 endfunction
 
-// 覆盖水颜色(高清)
+// 覆盖水颜色
+// 仅支持高清版和决定版
 // @since 3.0.0
 function BlzSetHDWaterColorOverrideBJ takes nothing returns nothing
 	call BlzSetHDWaterColorOverride(true)
 endfunction
 
-// 取消覆盖水颜色(高清)
+// 取消覆盖水颜色
+// 仅支持高清版和决定版
 // @since 3.0.0
 function BlzClearHDWaterColorOverrideBJ takes nothing returns nothing
 	call BlzSetHDWaterColorOverride(false)
 endfunction
 
-// 设置水顶点位移(高清)
+// 设置水顶点位移
+// 仅支持高清版和决定版
 // @since 3.0.0
 function BlzSetHDWaterVertexDisplacementBJ takes integer vertexDisplacement returns nothing
 	call BlzSetHDWaterVertexDisplacement(vertexDisplacement)
 endfunction
 
-// 设置水最小不透明度(高清)
+// 设置水最小不透明度
+// 仅支持高清版和决定版
 // @since 3.0.0
 function BlzSetHDWaterMinOpacityBJ takes integer minOpacity returns nothing
 	call BlzSetHDWaterMinOpacity(minOpacity)
 endfunction
 
-// 设置水最大不透明度(高清)
+// 设置水最大不透明度
+// 仅支持高清版和决定版
 // @since 3.0.0
 function BlzSetHDWaterMaxOpacityBJ takes integer maxOpacity returns nothing
 	call BlzSetHDWaterMaxOpacity(maxOpacity)
 endfunction
 
-// 设置水反射率(高清)
+// 设置水反射率
+// 仅支持高清版和决定版
 // @since 3.0.0
 function BlzSetHDWaterReflectivityBJ takes integer reflectivity returns nothing
 	call BlzSetHDWaterReflectivity(reflectivity)
 endfunction
 
-// 设置水放射率(高清)
+// 设置水放射率
+// 仅支持高清版和决定版
 // @since 3.0.0
 function BlzSetHDWaterEmissivityBJ takes integer emissivity returns nothing
 	call BlzSetHDWaterEmissivity(emissivity)
 endfunction
 
-// 设置水边缘柔和度(高清)
+// 设置水边缘柔和度
+// 仅支持高清版和决定版
 // @since 3.0.0
 function BlzSetHDWaterEdgeSoftnessBJ takes integer edgeSoftness returns nothing
 	call BlzSetHDWaterEdgeSoftness(edgeSoftness)
 endfunction
 
-// 设置水波浪强度(高清)
+// 设置水波浪强度
+// 仅支持高清版和决定版
 // @since 3.0.0
 function BlzSetHDWaterWaveStrengthBJ takes integer waveStrength returns nothing
 	call BlzSetHDWaterWaveStrength(waveStrength)
 endfunction
 
-// 设置水环境映射强度(高清)
+// 设置水环境映射强度
+// 仅支持高清版和决定版
 // @since 3.0.0
 function BlzSetHDWaterEnvMapStrengthBJ takes integer envMapStrengthy returns nothing
 	call BlzSetHDWaterEnvMapStrength(envMapStrengthy)
