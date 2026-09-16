@@ -8421,6 +8421,7 @@ native SetWaterBaseColor takes integer red, integer green, integer blue, integer
 // @since 3.0.0
 native SetHDWaterParams takes integer red, integer green, integer blue, boolean useColor, integer vertexDisplacement, integer minOpacity, integer maxOpacity, integer reflectivity, integer emissivity, integer edgeSoftness, integer waveStrength returns nothing
 // 设置水高级参数 [Ex](支持指定环境映射强度)
+// 仅支持高清版和决定版
 // @param override 启用/禁用 覆盖颜色
 // @param vertexDisplacement 顶点位移
 // @param minOpacity 最小不透明度
@@ -8433,33 +8434,43 @@ native SetHDWaterParams takes integer red, integer green, integer blue, boolean 
 // @since 3.0.0
 native SetHDWaterParamsEx takes integer red, integer green, integer blue, boolean override, integer vertexDisplacement, integer minOpacity, integer maxOpacity, integer reflectivity, integer emissivity, integer edgeSoftness, integer waveStrength, integer envMapStrength returns nothing
 // 设置水颜色(高清)
+// 仅支持高清版和决定版
 // @since 3.0.0
 native BlzSetHDWaterColor takes integer red, integer green, integer blue returns nothing
 // 开启/关闭 覆盖水颜色(高清)
+// 仅支持高清版和决定版
 // @since 3.0.0
 native BlzSetHDWaterColorOverride takes boolean override returns nothing
 // 设置水顶点位移(高清)
+// 仅支持高清版和决定版
 // @since 3.0.0
 native BlzSetHDWaterVertexDisplacement takes integer vertexDisplacement returns nothing
 // 设置水最小不透明度(高清)
+// 仅支持高清版和决定版
 // @since 3.0.0
 native BlzSetHDWaterMinOpacity takes integer minOpacity returns nothing
 // 设置水最大不透明度(高清)
+// 仅支持高清版和决定版
 // @since 3.0.0
 native BlzSetHDWaterMaxOpacity takes integer maxOpacity returns nothing
 // 设置水反射率(高清)
+// 仅支持高清版和决定版
 // @since 3.0.0
 native BlzSetHDWaterReflectivity takes integer reflectivity returns nothing
 // 设置水放射率(高清)
+// 仅支持高清版和决定版
 // @since 3.0.0
 native BlzSetHDWaterEmissivity takes integer emissivity returns nothing
 // 设置水边缘柔和度(高清)
+// 仅支持高清版和决定版
 // @since 3.0.0
 native BlzSetHDWaterEdgeSoftness takes integer edgeSoftness returns nothing
 // 设置水波浪强度(高清)
+// 仅支持高清版和决定版
 // @since 3.0.0
 native BlzSetHDWaterWaveStrength takes integer waveStrength returns nothing
 // 设置水环境映射强度(高清)
+// 仅支持高清版和决定版
 // @since 3.0.0
 native BlzSetHDWaterEnvMapStrength takes integer envMapStrengthy returns nothing
 // 启用/禁用 水面变形
