@@ -6899,14 +6899,17 @@ native FogModifierStop takes fogmodifier whichFogModifier returns nothing
 // 获取当前获取版本
 // VERSION_REIGN_OF_CHAOS 混乱之治
 // VERSION_FROZEN_THRONE 冰封王座
+// 
 native VersionGet takes nothing returns version
 // 查询当前游戏版本是否指定版本
 // VERSION_REIGN_OF_CHAOS 混乱之治
 // VERSION_FROZEN_THRONE 冰封王座
+// VERSION_FORSAKEN_KINGDOM 被遗忘者王国
 native VersionCompatible takes version whichVersion returns boolean
 // 查询当前版本是否支持指定版本
 // VERSION_REIGN_OF_CHAOS 混乱之治
 // VERSION_FROZEN_THRONE 冰封王座
+// VERSION_FORSAKEN_KINGDOM 被遗忘者王国
 native VersionSupported takes version whichVersion returns boolean
 
 // 结束游戏
