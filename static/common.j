@@ -197,7 +197,7 @@ type ubersplat extends handle
 // 哈希表
 type hashtable extends agent
 // UI框架/控件句柄
-// 3.00从 handle 改为 agent
+// 3.0.0从 handle 改为 agent
 type framehandle extends agent
 // 原生 UI框架/控件句柄 类型
 type originframetype extends handle
@@ -482,7 +482,8 @@ constant native UnitId takes string unitIdString returns integer
 // 转换单位类型成单位类型字符串
 constant native UnitId2String takes integer unitId returns string
 
-// 转换技能ID字符串成技能ID，当前未能正确生效   Not currently working correctly...
+// 转换技能ID字符串成技能ID，当前未能正确生效
+// Not currently working correctly...
 constant native AbilityId takes string abilityIdString returns integer
 // 转换技能ID成技能ID字符串
 constant native AbilityId2String takes integer abilityId returns string
@@ -1721,13 +1722,13 @@ globals
 	// @since 3.0.0
 	constant itemtype ITEM_TYPE_EQUIPMENT = ConvertItemType(7)
 	// 物品分类 未知
-	// 3.0 转换整数从7改为8
+	// 3.0.0 转换整数从7改为8
 	constant itemtype ITEM_TYPE_UNKNOWN = ConvertItemType(8)
 	// 物品分类 任何
-	// 3.0 转换整数从7改为9
+	// 3.0.0 转换整数从8改为9
 	constant itemtype ITEM_TYPE_ANY = ConvertItemType(9)
 	// 弃用物品分类，应改用力量提升分类
-	// Deprecated, should use ITEM_TYPE_POWERUP
+	// @deprecated should use ITEM_TYPE_POWERUP
 	constant itemtype ITEM_TYPE_TOME = ConvertItemType(2)
 
 
@@ -4340,7 +4341,7 @@ globals
 	// Unit Weapon
 
 	// 单位武器整数域 战斗 - 攻击1 - 伤害骰子数量 ('ua1d')
- constant unitweaponintegerfield UNIT_WEAPON_IF_ATTACK_DAMAGE_NUMBER_OF_DICE = ConvertUnitWeaponIntegerField('ua1d')
+    constant unitweaponintegerfield UNIT_WEAPON_IF_ATTACK_DAMAGE_NUMBER_OF_DICE = ConvertUnitWeaponIntegerField('ua1d')
 	// 单位武器整数域 战斗 - 攻击1 - 基础伤害 ('ua1b')
 	constant unitweaponintegerfield UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE = ConvertUnitWeaponIntegerField('ua1b')
 	// 单位武器整数域 战斗 - 攻击1 - 伤害骰子面数 ('ua1s')
@@ -4396,7 +4397,7 @@ globals
 	// Move Type
 
 	// 移动类型 没有/未知
- constant movetype MOVE_TYPE_UNKNOWN = ConvertMoveType(0)
+    constant movetype MOVE_TYPE_UNKNOWN = ConvertMoveType(0)
 	// 移动类型 步行
 	constant movetype MOVE_TYPE_FOOT = ConvertMoveType(1)
 	// 移动类型 飞行
@@ -4415,7 +4416,7 @@ globals
 	// Target Flag
 
 	// 目标类型 无
- constant targetflag TARGET_FLAG_NONE = ConvertTargetFlag(1)
+    constant targetflag TARGET_FLAG_NONE = ConvertTargetFlag(1)
 	// 目标类型 地面
 	constant targetflag TARGET_FLAG_GROUND = ConvertTargetFlag(2)
 	// 目标类型 空中
@@ -4440,7 +4441,7 @@ globals
 	// defense type
 
 	// 防御类型 轻型/小型，在低版本似乎为 small ，并没有 light
- constant defensetype DEFENSE_TYPE_LIGHT = ConvertDefenseType(0)
+    constant defensetype DEFENSE_TYPE_LIGHT = ConvertDefenseType(0)
 	// 防御类型 中型
 	constant defensetype DEFENSE_TYPE_MEDIUM = ConvertDefenseType(1)
 	// 防御类型 大型
@@ -4459,7 +4460,7 @@ globals
 	// Hero Attribute
 
 	// 英雄属性 力量
- constant heroattribute HERO_ATTRIBUTE_STR = ConvertHeroAttribute(1)
+    constant heroattribute HERO_ATTRIBUTE_STR = ConvertHeroAttribute(1)
 	// 英雄属性 智力
 	constant heroattribute HERO_ATTRIBUTE_INT = ConvertHeroAttribute(2)
 	// 英雄属性 敏捷
@@ -4468,7 +4469,7 @@ globals
 	// Armor Type
 
 	// 装甲类型 没有/未知
- constant armortype ARMOR_TYPE_WHOKNOWS = ConvertArmorType(0)
+    constant armortype ARMOR_TYPE_WHOKNOWS = ConvertArmorType(0)
 	// 装甲类型 肉体
 	constant armortype ARMOR_TYPE_FLESH = ConvertArmorType(1)
 	// 装甲类型 金属
@@ -4483,7 +4484,7 @@ globals
 	// Regeneration Type
 
 	// 生命恢复类型 无（不会恢复）
- constant regentype REGENERATION_TYPE_NONE = ConvertRegenType(0)
+    constant regentype REGENERATION_TYPE_NONE = ConvertRegenType(0)
 	// 生命恢复类型 总是
 	constant regentype REGENERATION_TYPE_ALWAYS = ConvertRegenType(1)
 	// 生命恢复类型 只在荒芜地表上
@@ -4496,7 +4497,7 @@ globals
 	// Unit Category
 
 	// 单位类别 泰坦族
- constant unitcategory UNIT_CATEGORY_GIANT = ConvertUnitCategory(1)
+    constant unitcategory UNIT_CATEGORY_GIANT = ConvertUnitCategory(1)
 	// 单位类别 不死族
 	constant unitcategory UNIT_CATEGORY_UNDEAD = ConvertUnitCategory(2)
 	// 单位类别 召唤物
@@ -4849,7 +4850,7 @@ native SetPlayerTaxRate takes player sourcePlayer, player otherPlayer, playersta
 // 设置指定玩家预设种族
 // 可选项[RACE_PREF_HUMAN、RACE_PREF_ORC、RACE_PREF_NIGHTELF、RACE_PREF_UNDEAD、RACE_PREF_DEMON、RACE_PREF_RANDOM、RACE_PREF_USER_SELECTABLE、RACE_PREF_FORSAKEN]
 native SetPlayerRacePreference takes player whichPlayer, racepreference whichRacePreference returns nothing
-// 设置玩家种族皮肤
+// 设置指定玩家种族皮肤（HUB）
 // 可选项[RACE_PREF_HUMAN、RACE_PREF_ORC、RACE_PREF_NIGHTELF、RACE_PREF_UNDEAD、RACE_PREF_DEMON、RACE_PREF_RANDOM、RACE_PREF_USER_SELECTABLE、RACE_PREF_FORSAKEN]
 // @since 3.0.0
 native SetPlayerRaceSkin takes player whichPlayer, racepreference whichRacePreference returns nothing
@@ -6378,16 +6379,16 @@ native UnitExtendedInventorySize takes unit whichUnit returns integer
 // 获取指定单位持有的物品(指定扩展物品栏格数)
 // @since 3.0.0
 native UnitItemInBagSlot takes unit whichUnit, integer itemSlot returns item
-// 获取指定单位持有的物品(指定装备栏)
+// 获取指定单位持有的物品(指定装备穿戴槽)
 // @since 3.0.0
 native UnitItemInEquipmentSlot takes unit whichUnit, loadoutslot itemSlot returns item
 // 查询指定装备是否被指定单位装备
 // @since 3.0.0
 native UnitHasItemEquipped takes unit whichUnit, item whichItem returns boolean
-// 查询指定单位指定装备栏是否为空
+// 查询指定单位指定装备穿戴槽是否为空
 // @since 3.0.0
 native UnitHasLoadoutSlotEmpty takes unit whichUnit, loadoutslot itemSlot returns boolean
-// 查询指定单位任意装备栏是否有装备
+// 查询指定单位任意装备穿戴槽是否有装备
 // @since 3.0.0
 native UnitHasAnyItemEquiped takes unit whichUnit returns boolean
 // 查询指定单位是否已装备指定类型的装备
@@ -6444,10 +6445,10 @@ constant native GetUnitMoveSpeed takes unit whichUnit returns real
 // 获取指定单位移动速度 (默认值)
 constant native GetUnitDefaultMoveSpeed takes unit whichUnit returns real
 // 获取指定单位指定状态值，如当前生命值/魔法值，最大生命/魔法值 [R]
-// @param whichUnitState 单位状态[UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE, UNIT_STATE_MANA, UNIT_STATE_MAX_MANA]
 // 获取单位状态
 // 获取指定单位的状态值（生命值、魔法值等）
 // @param whichUnit 要获取状态的单位
+// @param whichUnitState 单位状态[UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE, UNIT_STATE_MANA, UNIT_STATE_MAX_MANA]
 // @param whichUnitState 单位状态类型 (UNIT_STATE_LIFE, UNIT_STATE_MANA, UNIT_STATE_MAX_LIFE, UNIT_STATE_MAX_MANA等)
 // @returns 对应的状态值
 // @example set life = GetUnitState(u, UNIT_STATE_LIFE) // 获取单位生命值
@@ -6783,7 +6784,7 @@ constant native IsMaskedToPlayer takes real x, real y, player whichPlayer return
 constant native IsLocationMaskedToPlayer takes location whichLocation, player whichPlayer returns boolean
 
 // 获取玩家种族
-// 返回值[RACE_NIGHTELF,RACE_HUMAN,RACE_ORC,RACE_UNDEAD]
+// 返回值[RACE_HUMAN、RACE_ORC、RACE_UNDEAD、RACE_NIGHTELF、RACE_DEMON、RACE_OTHER]
 constant native GetPlayerRace takes player whichPlayer returns race
 // 获取玩家编号 [R]
 // 编号从0开始，即玩家1编号为0
@@ -6804,8 +6805,8 @@ constant native GetPlayerState takes player whichPlayer, playerstate whichPlayer
 // 获取玩家得分
 constant native GetPlayerScore takes player whichPlayer, playerscore whichPlayerScore returns integer
 // 查询玩家与玩家的联盟类型是否指定类型
-// @param whichAllianceSetting 联盟类型
 // 玩家的联盟类型可以不同，A对B是共享视野，B对A是共享控制权
+// @param whichAllianceSetting 联盟类型
 constant native GetPlayerAlliance takes player sourcePlayer, player otherPlayer, alliancetype whichAllianceSetting returns boolean
 
 // 获取玩家生命值(百分比)障碍 [R]
@@ -7134,14 +7135,14 @@ native SaveUnitHandle takes hashtable table, integer parentKey, integer childKey
 // @since 1.24
 native SaveAbilityHandle takes hashtable table, integer parentKey, integer childKey, ability whichAbility returns boolean
 // 保存计时器到哈希表 [C]
-// @since 1.24
 // @see LoadTimerHandle
 // @param table 哈希表
 // @param parentKey 父键
 // @param childKey 子键
 // @param whichTimer 要保存的计时器
-// @example call SaveTimerHandle(ht, 0, 1, t)
 // @returns true 表示保存成功
+// @example call SaveTimerHandle(ht, 0, 1, t)
+// @since 1.24
 native SaveTimerHandle takes hashtable table, integer parentKey, integer childKey, timer whichTimer returns boolean
 // 保存触发器到哈希表 [C]
 // @since 1.24
@@ -7276,13 +7277,13 @@ native LoadUnitHandle takes hashtable table, integer parentKey, integer childKey
 native LoadAbilityHandle takes hashtable table, integer parentKey, integer childKey returns ability
 // 从哈希表提取计时器 [C]
 // 若仍需继续使用该计时器，请勿排泄
-// @since 1.24
 // @see SaveTimerHandle
 // @param table 哈希表
 // @param parentKey 父键
 // @param childKey 子键
-// @example set t = LoadTimerHandle(ht, 0, 1)
 // @returns 提取到的计时器句柄；不存在时返回 null
+// @example set t = LoadTimerHandle(ht, 0, 1)
+// @since 1.24
 native LoadTimerHandle takes hashtable table, integer parentKey, integer childKey returns timer
 // 从哈希表提取触发器 [C]
 // @since 1.24
@@ -7624,19 +7625,19 @@ native PlayModelCinematic takes string modelName returns nothing
 native BlzPreloadModelCinematicGame takes string modelName returns boolean
 // 获取游戏过场电影累计数量
 // @since 3.0.0
-native BlzGetModelCinematicGameShotCount  takes nothing returns integer
+native BlzGetModelCinematicGameShotCount takes nothing returns integer
 // 获取游戏过场电影当前数量
 // @since 3.0.0
-native BlzGetModelCinematicGameCurrentShot  takes nothing returns integer
+native BlzGetModelCinematicGameCurrentShot takes nothing returns integer
 // 获取游戏过场电影剩余时间
 // @since 3.0.0
-native BlzGetModelCinematicGameRemainingTime  takes nothing returns real
+native BlzGetModelCinematicGameRemainingTime takes nothing returns real
 // 播放游戏过场电影(指定位置)
 // @since 3.0.0
-native BlzPlayModelCinematicGameAtPosition  takes string modelName, real posX, real posY, real posZ, real RotZ returns nothing
+native BlzPlayModelCinematicGameAtPosition takes string modelName, real posX, real posY, real posZ, real RotZ returns nothing
 // 启用/禁用 过场电影
 // @since 3.0.0
-native BlzSetCinematicEnabledDE     takes boolean enable returns nothing
+native BlzSetCinematicEnabledDE takes boolean enable returns nothing
 // 设置最小阴影投射点灯光计数
 // @since 3.0.0
 native BlzSetMinShadowCastingPointLightCount takes integer count returns nothing
@@ -7724,7 +7725,7 @@ native QuestSetTitle takes quest whichQuest, string title returns nothing
 native QuestSetDescription takes quest whichQuest, string description returns nothing
 // 设置任务图标
 native QuestSetIconPath takes quest whichQuest, string iconPath returns nothing
-// 设置任务是否必须完成(区分主线和支线)
+// 设置任务是否必须完成(用于区分主线和支线)
 native QuestSetRequired takes quest whichQuest, boolean required returns nothing
 // 设置任务是否完成
 native QuestSetCompleted takes quest whichQuest, boolean completed returns nothing
@@ -7735,7 +7736,7 @@ native QuestSetFailed takes quest whichQuest, boolean failed returns nothing
 // 开启/关闭 指定任务 [R]
 native QuestSetEnabled takes quest whichQuest, boolean enabled returns nothing
 
-// 查询任务是否必须完成（区分主线或支线任务）
+// 查询任务是否必须完成（用于区分主线或支线任务）
 native IsQuestRequired takes quest whichQuest returns boolean
 // 查询任务是否已完成
 native IsQuestCompleted takes quest whichQuest returns boolean
@@ -7772,68 +7773,68 @@ native ForceQuestDialogUpdate takes nothing returns nothing
 
 // 新建计时器窗口 [R]
 // 不能在游戏初始化事件的触发器内创建，必须有时间差
-// @since 1.00
 // @see DestroyTimerDialog
-// @param t 绑定的计时器
-// @example set td = CreateTimerDialog(t)
+// @param t 要创建窗口的计时器
 // @returns 新建的计时器窗口句柄
+// @example set td = CreateTimerDialog(t)
+// @since 1.00
 native CreateTimerDialog takes timer t returns timerdialog
 // 销毁计时器窗口
-// @since 1.00
 // @see CreateTimerDialog
 // @param whichDialog 要销毁的计时器窗口
 // @example call DestroyTimerDialog(td)
+// @since 1.00
 native DestroyTimerDialog takes timerdialog whichDialog returns nothing
 // 设置计时器窗口标题
-// @since 1.00
 // @param whichDialog 计时器窗口
 // @param title 标题文本
 // @example call TimerDialogSetTitle(td, "Wave Timer")
+// @since 1.00
 native TimerDialogSetTitle takes timerdialog whichDialog, string title returns nothing
 // 设置计时器窗口文字颜色 [R]
-// @since 1.00
 // @param whichDialog 计时器窗口
 // @param red 红色通道（0-255）
 // @param green 绿色通道（0-255）
 // @param blue 蓝色通道（0-255）
 // @param alpha 透明度（0-255）
 // @example call TimerDialogSetTitleColor(td, 255, 255, 0, 255)
+// @since 1.00
 native TimerDialogSetTitleColor takes timerdialog whichDialog, integer red, integer green, integer blue, integer alpha returns nothing
 // 设置计时器窗口计时颜色 [R]
-// @since 1.00
 // @param whichDialog 计时器窗口
 // @param red 红色通道（0-255）
 // @param green 绿色通道（0-255）
 // @param blue 蓝色通道（0-255）
 // @param alpha 透明度（0-255）
 // @example call TimerDialogSetTimeColor(td, 255, 255, 255, 255)
+// @since 1.00
 native TimerDialogSetTimeColor takes timerdialog whichDialog, integer red, integer green, integer blue, integer alpha returns nothing
 // 设置计时器窗口速率 [R]
-// @since 1.00
 // @param whichDialog 计时器窗口
 // @param speedMultFactor 显示速率倍率（1.00 为正常）
 // @example call TimerDialogSetSpeed(td, 1.00)
+// @since 1.00
 native TimerDialogSetSpeed takes timerdialog whichDialog, real speedMultFactor returns nothing
 // 显示/隐藏 计时器窗口(所有玩家) [R]
-// @since 1.00
 // @see IsTimerDialogDisplayed
 // @param whichDialog 计时器窗口
 // @param display true 显示，false 隐藏
 // @example call TimerDialogDisplay(td, true)
+// @since 1.00
 native TimerDialogDisplay takes timerdialog whichDialog, boolean display returns nothing
 // 查询计时器窗口是否显示
-// @since 1.00
 // @see TimerDialogDisplay
 // @param whichDialog 计时器窗口
 // @example set shown = IsTimerDialogDisplayed(td)
 // @returns true 表示当前对本地玩家可见
+// @since 1.00
 native IsTimerDialogDisplayed takes timerdialog whichDialog returns boolean
 // 设置计时器窗口倒计时
 // 可创建另一个计时器(隐藏)，在其倒计时结束后，修改本窗口的倒计时，从而实现正向计时
-// @since 1.00
 // @param whichDialog 计时器窗口
 // @param timeRemaining 要显示的剩余时间（秒）
 // @example call TimerDialogSetRealTimeRemaining(td, 30.00)
+// @since 1.00
 native TimerDialogSetRealTimeRemaining takes timerdialog whichDialog, real timeRemaining returns nothing
 
 
@@ -8658,7 +8659,8 @@ native RecycleGuardPosition takes unit hUnit returns nothing
 native RemoveAllGuardPositions takes player num returns nothing
 
 
-// 作弊码
+// 作弊(指定作弊码)
+// 详见 Cheats.j 的 DebugDemo
 native Cheat takes string cheatStr returns nothing
 // 查询游戏是否无法胜利（输入了作弊） [R]
 native IsNoVictoryCheat takes nothing returns boolean
@@ -8680,18 +8682,23 @@ native PreloadEndEx takes nothing returns nothing
 // 清空预载
 native PreloadGenClear takes nothing returns nothing
 // 开始预载
-// - 配合PreloadGenEnd使用
+// 配合以下函数使用
 // 1. call PreloadGenStart()
 // 2. call Preloader("blp\\jass.blp")
 // 3. call PreloadGenEnd("log.pld")
 native PreloadGenStart takes nothing returns nothing
 // 结束预载
 // @param filename 绝对路径,这个文件的后缀可以是任何类型,因此你可以生成可执行文件的后缀
+// 配合以下函数使用
 // 1. call PreloadGenStart()
 // 2. call Preloader("blp\\jass.blp")
 // 3. call PreloadGenEnd("log.pld")
 native PreloadGenEnd takes string filename returns nothing
 // 预载文件
+// 配合以下函数使用
+// 1. call PreloadGenStart()
+// 2. call Preloader("blp\\jass.blp")
+// 3. call PreloadGenEnd("log.pld")
 native Preloader takes string filename returns nothing
 
 
@@ -9375,11 +9382,11 @@ native BlzDisplayChatMessage takes player whichPlayer, integer recipient, string
 native BlzPauseUnitEx takes unit whichUnit, boolean flag returns nothing
 
 // 转换四字符码成字符串
-// @deprecated （未启用）内部未对外开放
-native BlzFourCC2S                                 takes integer value returns string
+// @deprecated 不可用
+native BlzFourCC2S takes integer value returns string
 // 转换字符串成四字符码
-// @deprecated （未启用）内部未对外开放
-native BlzS2FourCC                                 takes string value returns integer
+// @deprecated 不可用
+native BlzS2FourCC takes string value returns integer
 
 // 设置单位朝向(角度)
 native BlzSetUnitFacingEx takes unit whichUnit, real facingAngle returns nothing
@@ -9559,7 +9566,7 @@ native BlzGetUnitSkin takes unit whichUnit returns integer
 // 获取物品皮肤ID
 native BlzGetItemSkin takes item whichItem returns integer
 // 获取可破坏物皮肤ID(未启用)
-// native BlzGetDestructableSkin                         takes destructable whichDestructable returns integer
+// native BlzGetDestructableSkin takes destructable whichDestructable returns integer
 
 // 设置单位皮肤
 // 对镜像及幻象无效
@@ -9615,16 +9622,16 @@ native BlzQueueNeutralPointOrderById takes player forWhichPlayer, unit neutralSt
 native BlzQueueNeutralTargetOrderById takes player forWhichPlayer, unit neutralStructure, integer unitId, widget target returns boolean
 
 // 获取指定单位当前队列中的命令数量(该单位当前命令数量)
-// @since 1.33
 // returns the number of orders the unit currently has queued up
+// @since 1.33
 native BlzGetUnitOrderCount takes unit whichUnit returns integer
 // 停止指定单位所有命令或只清除队列中命令
-// @since 1.33
 // clears either all orders or only queued up orders
+// @since 1.33
 native BlzUnitClearOrders takes unit whichUnit, boolean onlyQueued returns nothing
 // 停止指定单位当前的命令，并可选清除队列中命令
-// @since 1.33
 // stops the current order and optionally clears the queue
+// @since 1.33
 native BlzUnitForceStopOrder takes unit whichUnit, boolean clearQueue returns nothing
 
 // 创建可破坏物(指定纵摇滚动)
