@@ -1739,10 +1739,10 @@ globals
     // 装备类别 无
     // @since 3.0.0
     constant equipmentType EQUIPMENT_TYPE_NONE = ConvertEquipmentType(0)
-    // 装备类别 头部
+    // 装备类别 头盔
     // @since 3.0.0
     constant equipmentType EQUIPMENT_TYPE_HEAD = ConvertEquipmentType(1)
-    // 装备类别 胸部
+    // 装备类别 胸甲
     // @since 3.0.0
     constant equipmentType EQUIPMENT_TYPE_CHEST = ConvertEquipmentType(2)
     // 装备类别 手套
@@ -1754,10 +1754,10 @@ globals
     // 装备类别 戒指
     // @since 3.0.0
     constant equipmentType EQUIPMENT_TYPE_RING = ConvertEquipmentType(5)
-    // 装备类别 主手
+    // 装备类别 主手武器
     // @since 3.0.0
     constant equipmentType EQUIPMENT_TYPE_PRIMARY = ConvertEquipmentType(6)
-    // 装备类别 副手
+    // 装备类别 副手武器
     // @since 3.0.0
     constant equipmentType EQUIPMENT_TYPE_OFFHAND = ConvertEquipmentType(7)
     // 装备类别 饰品
@@ -1803,10 +1803,10 @@ globals
 // Equipment slot constants
 //===================================================
 
-    // 装备穿戴槽 头部
+    // 装备穿戴槽 头盔
     // @since 3.0.0
     constant loadoutslot EQUIPMENT_LOADOUT_SLOT_HEAD = ConvertLoadoutSlot(0)
-    // 装备穿戴槽 胸部
+    // 装备穿戴槽 胸甲
     // @since 3.0.0
     constant loadoutslot EQUIPMENT_LOADOUT_SLOT_CHEST = ConvertLoadoutSlot(1)
     // 装备穿戴槽 手套
@@ -1815,16 +1815,16 @@ globals
     // 装备穿戴槽 靴子
     // @since 3.0.0
     constant loadoutslot EQUIPMENT_LOADOUT_SLOT_BOOTS = ConvertLoadoutSlot(3)
-    // 装备穿戴槽 主戒
+    // 装备穿戴槽 主手戒
     // @since 3.0.0
     constant loadoutslot EQUIPMENT_LOADOUT_SLOT_RING = ConvertLoadoutSlot(4)
-    // 装备穿戴槽 副戒
+    // 装备穿戴槽 副手戒
     // @since 3.0.0
     constant loadoutslot EQUIPMENT_LOADOUT_SLOT_RINGALT = ConvertLoadoutSlot(5)
-    // 装备穿戴槽 主手
+    // 装备穿戴槽 主手武器
     // @since 3.0.0
     constant loadoutslot EQUIPMENT_LOADOUT_SLOT_PRIMARY = ConvertLoadoutSlot(6)
-    // 装备穿戴槽 副手
+    // 装备穿戴槽 副手武器
     // @since 3.0.0
     constant loadoutslot EQUIPMENT_LOADOUT_SLOT_OFFHAND = ConvertLoadoutSlot(7)
     // 装备穿戴槽 饰品
