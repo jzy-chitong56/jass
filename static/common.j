@@ -1747,7 +1747,7 @@ globals
     // 装备类别 手套
     // @since 3.0.0
     constant equipmentType EQUIPMENT_TYPE_GLOVES = ConvertEquipmentType(3)
-    // 装备类别 鞋子
+    // 装备类别 靴子
     // @since 3.0.0
     constant equipmentType EQUIPMENT_TYPE_BOOTS = ConvertEquipmentType(4)
     // 装备类别 戒指
