@@ -1791,7 +1791,7 @@ globals
     // 物品标签 世界探索
     // @since 3.0.0
     constant itemTag ITEMTAG_TYPE_WORLD = ConvertItemTag(6)
-    // 物品标签 商店
+    // 物品标签 商店出售
     // @since 3.0.0
     constant itemTag ITEMTAG_TYPE_SHOP = ConvertItemTag(7)
     // 物品标签 任何
