@@ -1788,7 +1788,7 @@ globals
     // 物品标签 解密奖励
     // @since 3.0.0
     constant itemTag ITEMTAG_TYPE_PUZZLE = ConvertItemTag(5)
-    // 物品标签 世界场景
+    // 物品标签 世界探索
     // @since 3.0.0
     constant itemTag ITEMTAG_TYPE_WORLD = ConvertItemTag(6)
     // 物品标签 商店
