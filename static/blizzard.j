@@ -81,7 +81,7 @@ globals
     // 扩展物品栏格子上限，默认30
     // @since 3.0.0
     constant integer bj_MAX_EXTENDED_INVENTORY =  30
-    // 装备数量上限，默认9
+    // 穿戴装备数量上限，默认9
     // @since 3.0.0
     constant integer bj_MAX_EQUIPMENT_INVENTORY =  9
     // 玩家数量上限（12/24，不含中立玩家，以1.29区分）
@@ -1303,10 +1303,10 @@ globals
     minimapicon bj_lastCreatedMinimapIcon = null
     // 最后创建的按钮特效
     commandbuttoneffect bj_lastCreatedCommandButtonEffect = null
-    // 最后装备的物品
+    // 最后装备的装备物品
     // @since 3.0.0
     item bj_lastEquippedItem = null
-    // 最后卸载的装备
+    // 最后卸下的装备物品
     // @since 3.0.0
     item bj_lastUnequippedItem = null
 
@@ -4545,7 +4545,7 @@ function UnitItemInBagSlotBJ takes unit whichUnit, integer itemSlot returns item
     return UnitItemInBagSlot(whichUnit, itemSlot-1)
 endfunction
 
-// 获取指定单位持有的物品(指定装备栏)
+// 获取指定单位持有的物品(指定装备穿戴槽)
 // @since 3.0.0
 function UnitItemInEquipmentSlotBJ takes unit whichUnit, loadoutslot slot returns item
     return UnitItemInEquipmentSlot(whichUnit, slot)
@@ -4626,7 +4626,7 @@ function UnitHasItemOfTypeBaggedBJ takes unit whichUnit, integer itemId returns 
 endfunction
 
 // 获取指定单位的扩展物品栏格是否拥有指定装备类别的物品
-// 查到第一个同类型装备就返回该扩展物品栏格数，没有返回0
+// 查到第一个同类别装备就返回该扩展物品栏格数，没有返回0
 // @since 3.0.0
 function GetInventoryBagIndexOfEquipmentTypeBJ takes unit whichUnit, equipmentType whichEquipmentType returns integer
     local integer index
@@ -4645,8 +4645,8 @@ function GetInventoryBagIndexOfEquipmentTypeBJ takes unit whichUnit, equipmentTy
     return 0
 endfunction
 
-// 获取指定单位扩展装备栏中指定装备类别的物品
-// 获取扩展装备栏中第一个同类型装备
+// 获取指定单位扩展物品栏中指定装备类型的物品
+// 获取扩展物品栏中第一个同类型装备
 // @since 3.0.0
 function GetItemOfEquipmentTypeFromUnitBagBJ takes unit whichUnit, equipmentType whichEquipmentType returns item
     local integer index = GetInventoryBagIndexOfEquipmentTypeBJ(whichUnit, whichEquipmentType)
@@ -4775,7 +4775,7 @@ function UnitExtendedInventorySizeBJ takes unit whichUnit returns integer
     return UnitExtendedInventorySize(whichUnit)
 endfunction
 
-// 获取指定单位已装备的装备数量
+// 获取指定单位已装备的装备物品数量
 // @since 3.0.0
 function UnitEquipmentCount takes unit whichUnit returns integer
     local integer index = 0
