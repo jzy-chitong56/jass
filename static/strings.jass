@@ -1146,6 +1146,10 @@
 // @since 3.0.0
 "cleansingfire"
 
+// 奉献
+// @since 3.0.0
+"consecration"
+
 // 技能命令串 物品 - 食人魔法师图腾（嗜血）切换激活
 // @since 3.0.0
 "booldlust"
