@@ -1159,7 +1159,7 @@
 // @since 3.0.0
 "cleansingfire"
 
-// 奉献
+// 技能命令串 奉献
 // @since 3.0.0
 "consecration"
 
@@ -1178,6 +1178,104 @@
 // 技能命令串 物品 - 食人魔法师图腾（嗜血）激活
 // @since 3.0.0
 "booldluston"
+
+// 技能命令串
+// 多个技能通用
+// 不屈守卫(含所有天赋)，不屈抗争(含所有天赋)
+// @since 3.0.0
+"unyieldingguard"
+
+// 技能命令串 严酷信念(含所有天赋)
+// @since 3.0.0
+"grimconviction"
+
+// 技能命令串 凋零射击(含所有天赋)
+// @since 3.0.0
+"witheringfire"
+
+// 技能命令串 圣光之怒
+// @since 3.0.0
+"holywrath"
+
+// 技能命令串 圣光化身
+// @since 3.0.0
+"undeadvengeance"
+
+// 技能命令串 圣光慈悲(含所有天赋)
+// @since 3.0.0
+"lightsmercy"
+
+// 技能命令串 圣光涌动(含所有天赋)
+// @since 3.0.0
+"surgeoflight"
+
+// 技能命令串 女妖的哀嚎(含所有天赋)
+// @since 3.0.0
+"Locustswarm"
+
+// 技能命令串 心灵控制(含所有天赋)
+// @since 3.0.0
+"mindcontrol"
+
+// 技能命令串 战争怒吼(含所有天赋)
+// @since 3.0.0
+"warcry"
+
+// 技能命令串 激活指引之手(含所有天赋)
+// @since 3.0.0
+"guidinghand"
+
+// 技能命令串 取消指引之手激活状态(含所有天赋)
+// @since 3.0.0
+"unguidinghand"
+
+// 技能命令串 挑战号令
+// @since 3.0.0
+"challengingcall"
+
+// 技能命令串 挑衅(含所有天赋)
+// @since 3.0.0
+"heroicchallenge"
+
+// 技能命令串 攻城槌(含所有天赋)
+// @since 3.0.0
+"batteringram"
+
+// 技能命令串 无情横扫(含所有天赋)
+// @since 3.0.0
+"relentlesscleave"
+
+// 技能命令串 横扫攻击(含所有天赋)
+// @since 3.0.0
+"sweepingstrike"
+
+// 技能命令串 取消灵魂提灯激活状态(含所有天赋)
+// @since 3.0.0
+"unsoullantern"
+
+// 技能命令串 激活灵魂提灯(含所有天赋)
+// @since 3.0.0
+"soullantern"
+
+// 技能命令串 碎颅者(含所有天赋)
+// @since 3.0.0
+"headsplitter"
+
+// 技能命令串 英勇冲锋(含所有天赋)
+// @since 3.0.0
+"valiantcharge"
+
+// 技能命令串 英勇挥砍(含所有天赋)
+// @since 3.0.0
+"heroicslash"
+
+// 技能命令串 逮捕(含所有天赋)
+// @since 3.0.0
+"apprehend"
+
+// 技能命令串 鼓舞士气(含所有天赋)
+// @since 3.0.0
+"inspirecourage"
 
 // FDF(框架定义) 字母模式
 "AlphaMode"
