@@ -36,9 +36,6 @@
 // 技能命令串 AImove(AI移动)
 "aimove"
 
-// 技能命令串 影遁(夜晚)
-"ambush"
-
 // 技能命令串 先祖幽灵
 "ancestralspirit"
 
