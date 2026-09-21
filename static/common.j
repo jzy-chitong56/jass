@@ -833,7 +833,7 @@ globals
 	constant animtype ANIM_TYPE_WALK = ConvertAnimType(5)
 	// 动画类型 - 攻击
 	constant animtype ANIM_TYPE_ATTACK = ConvertAnimType(6)
-	// 动画类型 - 变异
+	// 动画类型 - 变身
 	constant animtype ANIM_TYPE_MORPH = ConvertAnimType(7)
 	// 动画类型 - 昏睡
 	constant animtype ANIM_TYPE_SLEEP = ConvertAnimType(8)
@@ -851,9 +851,9 @@ globals
 	constant subanimtype SUBANIM_TYPE_SLAM = ConvertSubAnimType(14)
 	// 子动画类型 - 投掷
 	constant subanimtype SUBANIM_TYPE_THROW = ConvertSubAnimType(15)
-	// 子动画类型 - 尖刺
+	// 子动画类型 - 投毒
 	constant subanimtype SUBANIM_TYPE_SPIKED = ConvertSubAnimType(16)
-	// 子动画类型 - 快
+	// 子动画类型 - 快速
 	constant subanimtype SUBANIM_TYPE_FAST = ConvertSubAnimType(17)
 	// 子动画类型 - 旋转
 	constant subanimtype SUBANIM_TYPE_SPIN = ConvertSubAnimType(18)
@@ -875,7 +875,7 @@ globals
 	constant subanimtype SUBANIM_TYPE_FIRE = ConvertSubAnimType(26)
 	// 子动画类型 - 血肉
 	constant subanimtype SUBANIM_TYPE_FLESH = ConvertSubAnimType(27)
-	// 子动画类型 - 命中
+	// 子动画类型 - 击中
 	constant subanimtype SUBANIM_TYPE_HIT = ConvertSubAnimType(28)
 	// 子动画类型 - 受伤
 	constant subanimtype SUBANIM_TYPE_WOUNDED = ConvertSubAnimType(29)
