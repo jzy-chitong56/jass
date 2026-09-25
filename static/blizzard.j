@@ -6131,7 +6131,8 @@ function SetDestructableMaxLifeBJ takes destructable d, real max returns nothing
 endfunction
 
 
-// 打开/关闭/破坏 门
+// 打开/关闭/破坏 门(指定可破坏物)
+// 关闭传 bj_GATEOPERATION_CLOSE，打开传 bj_GATEOPERATION_OPEN，摧毁传 bj_GATEOPERATION_DESTROY
 function ModifyGateBJ takes integer gateOperation, destructable d returns nothing
     if(gateOperation == bj_GATEOPERATION_CLOSE) then
         if(GetDestructableLife(d) <= 0) then
@@ -6155,6 +6156,7 @@ endfunction
 
 
 // 获取升降台高度
+// 根据遮挡高度确定升降台高度
 // Determine the elevator's height from its occlusion height.
 function GetElevatorHeight takes destructable d returns integer
     local integer height
@@ -6168,6 +6170,7 @@ endfunction
 
 
 // 设置升降台高度
+// 会根据目标高度和当前高度自动控制
 // To properly animate an elevator, we must know not only what height we
 // want to change to, but also what height we are currently at.  This code
 // determines the elevator's current height from its occlusion height.
@@ -6280,13 +6283,14 @@ function NearbyElevatorExists takes real x, real y returns boolean
     return bj_elevatorNeighbor != null
 endfunction
 
-// 获取升降台墙
+// 获取升降台墙(路径阻断器)
 function FindElevatorWallBlockerEnum takes nothing returns nothing
     set bj_elevatorWallBlocker = GetEnumDestructable()
 endfunction
 
 
-// 设置升降台墙
+// 设置升降台墙墙（路径阻断器）
+// 自动在适当位置摧毁或恢复路径阻断器来切换升降台一面墙路径打关（路径阻断器不存在时会自动创建）
 // This toggles pathing on or off for one wall of an elevator by killing
 // or reviving a pathing blocker at the appropriate location (and creating
 // the pathing blocker in the first place, if it does not yet exist).
@@ -6447,7 +6451,6 @@ endfunction
 //***************************************************************************
 
 // 选取单位组做指定动作
-// 最多12个单位响应
 function ForGroupBJ takes group whichGroup, code callback returns nothing
     // If the user wants the group destroyed, remember that fact and clear
     // the flag, in case it is used again in the callback.
