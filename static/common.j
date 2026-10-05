@@ -120,7 +120,7 @@ type volumegroup extends handle
 type camerafield extends handle
 // 镜头
 type camerasetup extends handle
-// 玩家颜色（1.28及以下共12种，1.29及以上共24种，不含中立玩家颜色）
+// 玩家颜色（1.28及以下共12种，1.29及以上共24种，3.00及以上共25种，不含中立玩家颜色）
 type playercolor extends handle
 // 出生点放置方式
 type placement extends handle
@@ -4941,7 +4941,7 @@ native GetPlayerTeam takes player whichPlayer returns integer
 // 获取指定玩家出生点编号
 // 返回0~11/23。在未固定出生点时，出生点编号和玩家不会按编号对应
 native GetPlayerStartLocation takes player whichPlayer returns integer
-// 获取指定玩家颜色
+// 获取指定玩家的玩家颜色
 native GetPlayerColor takes player whichPlayer returns playercolor
 // 查询指定玩家是否可选
 native GetPlayerSelectable takes player whichPlayer returns boolean
@@ -6026,7 +6026,7 @@ native QueueDestructableAnimation takes destructable d, string whichAnimation re
 native SetDestructableAnimation takes destructable d, string whichAnimation returns nothing
 // 设置指定可破坏物动画播放速度 [R]
 native SetDestructableAnimationSpeed takes destructable d, real speedFactor returns nothing
-// 设置指定可破坏物颜色
+// 设置指定可破坏物的玩家颜色
 // @since 3.00
 native SetDestructableColor takes destructable d, playercolor color returns nothing
 // 显示/隐藏 指定可破坏物[R]
@@ -6058,11 +6058,11 @@ native GetItemX takes item i returns real
 native GetItemY takes item i returns real
 // 移动指定物品到坐标(立即)(指定坐标) [R]
 native SetItemPosition takes item i, real x, real y returns nothing
-// 设置指定物品颜色
+// 设置指定物品的玩家颜色
 // @deprecated 请改用 BlzSetItemColor
 // @since 3.00
 native SetItemColor takes item whichItem, playercolor whichColor returns nothing
-// 设置指定物品颜色
+// 设置指定物品的玩家颜色
 // @since 3.01
 native BlzSetItemColor takes item whichItem, playercolor whichColor returns nothing
 // 允许/禁止 指定物品死亡时掉落
@@ -6291,7 +6291,7 @@ native GetUnitDefaultFlyHeight takes unit whichUnit returns real
 // @param changeColor 是否改变单位颜色
 // @example call SetUnitOwner(u, Player(1), true) // 将单位转移给玩家2并改变颜色
 native SetUnitOwner takes unit whichUnit, player whichPlayer, boolean changeColor returns nothing
-// 设置指定单位颜色(指定玩家颜色)
+// 设置指定单位的玩家颜色
 native SetUnitColor takes unit whichUnit, playercolor whichColor returns nothing
 
 // 设置指定单位尺寸(按倍数) [R]
@@ -8757,14 +8757,14 @@ native SetDoodadAnimationRect takes rect r, integer doodadID, string animName, b
 // 设置指定地表装饰物动画(单个地表装饰物)
 // @since 3.00
 native BlzSetSingleDoodadAnimation takes integer index, string animName, boolean animRandom returns nothing
-// 设置指定类型地表装饰物颜色
+// 设置指定类型地表装饰物的玩家颜色
 // @param nearestOnly 是否只修改最接近范围内装饰物
 // @since 3.00
 native SetDoodadColor takes real x, real y, real radius, integer doodadID, boolean nearestOnly, playercolor whichColor returns nothing
-// 设置指定区域地表装饰物颜色
+// 设置指定区域地表装饰物的玩家颜色
 // @since 3.00
 native SetDoodadColorRect takes rect r, integer doodadID, playercolor whichColor returns nothing
-// 设置指定地表装饰物颜色(单个地表装饰物)
+// 设置指定地表装饰物的玩家颜色(单个地表装饰物)
 // @since 3.00
 native BlzSetSingleDoodadColor takes integer index, playercolor whichColor returns nothing
 // 获取指定地表装饰物 X 坐标(单个地表装饰物)
@@ -9837,52 +9837,52 @@ native BlzCreateDeadDestructableWithSkinPitchRoll takes integer objectid, real x
 // @since 3.00
 native BlzCreateDeadDestructableZWithSkinPitchRoll takes integer objectid, real x, real y, real z, real face, real roll, real pitch, real scale, integer variation, integer skinId returns destructable
 
-// 创建可破坏物(指定颜色)
+// 创建可破坏物(指定玩家颜色)
 // @since 3.00
 native BlzCreateDestructableWithColor takes integer objectid, real x, real y, real face, real scale, integer variation, playercolor color returns destructable
-// 创建可破坏物(指定颜色(含 Z 坐标))
+// 创建可破坏物(指定玩家颜色(含 Z 坐标))
 // @since 3.00
 native BlzCreateDestructableZWithColor takes integer objectid, real x, real y, real z, real face, real scale, integer variation, playercolor color returns destructable
-// 创建可破坏物(毁坏的)(指定颜色)
+// 创建可破坏物(毁坏的)(指定玩家颜色)
 // @since 3.00
 native BlzCreateDeadDestructableWithColor takes integer objectid, real x, real y, real face, real scale, integer variation, playercolor color returns destructable
-// 创建可破坏物(毁坏的)(指定颜色(含 Z 坐标))
+// 创建可破坏物(毁坏的)(指定玩家颜色(含 Z 坐标))
 // @since 3.00
 native BlzCreateDeadDestructableZWithColor takes integer objectid, real x, real y, real z, real face, real scale, integer variation, playercolor color returns destructable
-// 创建可破坏物(指定皮肤)(指定颜色)
+// 创建可破坏物(指定皮肤)(指定玩家颜色)
 // @since 3.00
 native BlzCreateDestructableWithSkinColor takes integer objectid, real x, real y, real face, real scale, integer variation, integer skinId, playercolor color returns destructable
-// 创建可破坏物(指定皮肤)(指定颜色(含 Z 坐标))
+// 创建可破坏物(指定皮肤)(指定玩家颜色(含 Z 坐标))
 // @since 3.00
 native BlzCreateDestructableZWithSkinColor takes integer objectid, real x, real y, real z, real face, real scale, integer variation, integer skinId, playercolor color returns destructable
-// 创建可破坏物(指定皮肤)(毁坏的)(指定颜色)
+// 创建可破坏物(指定皮肤)(毁坏的)(指定玩家颜色)
 // @since 3.00
 native BlzCreateDeadDestructableWithSkinColor takes integer objectid, real x, real y, real face, real scale, integer variation, integer skinId, playercolor color returns destructable
-// 创建可破坏物(指定皮肤)(毁坏的)(指定颜色(含 Z 坐标))
+// 创建可破坏物(指定皮肤)(毁坏的)(指定玩家颜色(含 Z 坐标))
 // @since 3.00
 native BlzCreateDeadDestructableZWithSkinColor takes integer objectid, real x, real y, real z, real face, real scale, integer variation, integer skinId, playercolor color returns destructable
-// 创建可破坏物(指定纵摇滚动和颜色)
+// 创建可破坏物(指定纵摇滚动和玩家颜色)
 // @since 3.00
 native BlzCreateDestructablePitchRollWithColor takes integer objectid, real x, real y, real face, real roll, real pitch, real scale, integer variation, playercolor color returns destructable
-// 创建可破坏物(指定纵摇滚动(含 Z 坐标)和颜色)
+// 创建可破坏物(指定纵摇滚动(含 Z 坐标)和玩家颜色)
 // @since 3.00
 native BlzCreateDestructableZPitchRollWithColor takes integer objectid, real x, real y, real z, real face, real roll, real pitch, real scale, integer variation, playercolor color returns destructable
-// 创建可破坏物(毁坏的)(指定纵摇滚动和颜色)
+// 创建可破坏物(毁坏的)(指定纵摇滚动和玩家颜色)
 // @since 3.00
 native BlzCreateDeadDestructablePitchRollWithColor takes integer objectid, real x, real y, real face, real roll, real pitch, real scale, integer variation, playercolor color returns destructable
-// 创建可破坏物(毁坏的)(指定纵摇滚动(含 Z 坐标)和颜色)
+// 创建可破坏物(毁坏的)(指定纵摇滚动(含 Z 坐标)和玩家颜色)
 // @since 3.00
 native BlzCreateDeadDestructableZPitchRollWithColor takes integer objectid, real x, real y, real z, real face, real roll, real pitch, real scale, integer variation, playercolor color returns destructable
-// 创建可破坏物(指定皮肤)(指定纵摇滚动和颜色)
+// 创建可破坏物(指定皮肤)(指定纵摇滚动和玩家颜色)
 // @since 3.00
 native BlzCreateDestructableWithSkinPitchRollColor takes integer objectid, real x, real y, real face, real roll, real pitch, real scale, integer variation, integer skinId, playercolor color returns destructable
-// 创建可破坏物(指定皮肤)(指定纵摇滚动(含 Z 坐标)和颜色)
+// 创建可破坏物(指定皮肤)(指定纵摇滚动(含 Z 坐标)和玩家颜色)
 // @since 3.00
 native BlzCreateDestructableZWithSkinPitchRollColor takes integer objectid, real x, real y, real z, real face, real roll, real pitch, real scale, integer variation, integer skinId, playercolor color returns destructable
-// 创建可破坏物(毁坏的)(指定皮肤)(指定纵摇滚动和颜色)
+// 创建可破坏物(毁坏的)(指定皮肤)(指定纵摇滚动和玩家颜色)
 // @since 3.00
 native BlzCreateDeadDestructableWithSkinPitchRollColor takes integer objectid, real x, real y, real face, real roll, real pitch, real scale, integer variation, integer skinId, playercolor color returns destructable
-// 创建可破坏物(毁坏的)(指定皮肤)(指定纵摇滚动(含 Z 坐标)和颜色)
+// 创建可破坏物(毁坏的)(指定皮肤)(指定纵摇滚动(含 Z 坐标)和玩家颜色)
 // @since 3.00
 native BlzCreateDeadDestructableZWithSkinPitchRollColor takes integer objectid, real x, real y, real z, real face, real roll, real pitch, real scale, integer variation, integer skinId, playercolor color returns destructable
 
