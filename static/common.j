@@ -7872,6 +7872,9 @@ native EnableDragSelect takes boolean state, boolean ui returns nothing
 native EnablePreSelect takes boolean state, boolean ui returns nothing
 // 启用/禁用 选择
 native EnableSelect takes boolean state, boolean ui returns nothing
+// 获取HUD缩放值
+// @since 3.01
+native BlzGetHUDScale takes nothing returns real
 
 // Trackable API
 
